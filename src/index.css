@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#07070e;--surface:#0e0e1a;--card:#141422;--border:#1e1e32;
+  --accent:#6c47ff;--accent2:#9d7fff;--gold:#f0a500;--goldl:#ffc94d;
+  --text:#e8e6ff;--muted:#6b6a8a;--danger:#ff4d6d;--success:#00d68f;
+  --font-head:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-height:100vh;line-height:1.5;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--surface);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+input,select,textarea{
+  background:var(--surface);border:1.5px solid var(--border);color:var(--text);
+  padding:10px 14px;border-radius:10px;font-family:var(--font-body);font-size:13px;
+  outline:none;width:100%;transition:border-color .2s;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);}
+button{cursor:pointer;font-family:var(--font-body);border:none;outline:none;}
+h1,h2,h3,h4{font-family:var(--font-head);}
