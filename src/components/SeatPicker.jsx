@@ -71,7 +71,8 @@ export default function SeatPicker({event,user,onSeatsSelected,onTotalChange}){
     const token=localStorage.getItem('token');
     // Dynamic import to avoid crash if socket.io-client not installed
     import('socket.io-client').then(({io})=>{
-      socket=io('http://localhost:5001',{auth:{token},timeout:3000});
+      socket=io(
+  import.meta.env.VITE_SOCKET_URL || 'http://localhost:5001',{auth:{token},timeout:3000});
       socketRef.current=socket;
       socket.on('connect',()=>{
         setWsConnected(true);
